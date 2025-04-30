@@ -1,5 +1,5 @@
 name: daily_balance
-description: "A new Flutter project."
+description: "Track the good ☀️ and bad 🌑 things you did every day"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -30,6 +30,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_fonts: ^6.1.0       # Nunito
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.2
+  intl: ^0.20.2
+  url_launcher: ^6.3.1
+  flutter_native_splash: ^2.4.0
+  flutter_svg: ^2.0.9
+  flutter_markdown: ^0.6.18
+  font_awesome_flutter: ^10.7.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -38,6 +48,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -58,9 +69,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/logo.png
+    - assets/icons/check.svg
+    - assets/icons/x.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -87,3 +99,16 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/logo.png        # put a 512×512 logo there
+  android: true
+  ios: true
+  android_gravity: center
+  fullscreen: true
+
+flutter_launcher_icons:
+  image_path: assets/logo.png       # single 1024×1024 PNG you’ll create
+  android: true                     # generates adaptive + legacy
+  ios: true                         # generates full AppIcon set
+  remove_alpha_ios: true            # Apple rejects transparent-alpha icons
