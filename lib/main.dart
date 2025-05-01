@@ -120,9 +120,12 @@ class _QuoteScreenState extends State<QuoteScreen> {
               const SizedBox(height: 32), // spacer between logo & quote
 
               Text(
-                quote,
+                '"$quote"',
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 20),
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontStyle: FontStyle.italic,
+                ),
               ),
             ],
           ),
